@@ -58,6 +58,9 @@
                            <li class="nav-item">
                               <a class="nav-link" href="#">welcome,{{Session::get('logindata')}}</a>
                            </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="{{route('front.logout')}}">Logout</a>
+                           </li>
                            @else
                               <li class="nav-item">
                                  <a class="nav-link" href="{{route('front.login')}}">Login</a>

@@ -28,7 +28,7 @@
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="" class="option1">
+                           <a href="{{route('front.product_details')}}" class="option1">
                            Men's Shirt
                            </a>
                            <a href="" class="option2">

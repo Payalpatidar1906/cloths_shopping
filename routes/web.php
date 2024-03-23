@@ -6,10 +6,7 @@ use App\Http\Controllers\AdminController;
 
 
 
-// Route::get('/', function () {
-//     return view('front.login');
-// });
-
+Route::get('/', [FrontController::class,'home']);
 
 // Route::get('home' , [FrontController::class, 'home'])->name('home');
 Route::group(['prefix' => 'front' , 'as' => 'front.'], function()
@@ -38,11 +35,13 @@ Route::group(['prefix' => 'front' , 'as' => 'front.'], function()
     //Route::get('card' , [FrontController::class, 'card'])->name('card');
     Route::get('card',[FrontController::class, 'card'])->name('card');
 
-    Route::get('without_login_card',[FrontController::class, 'without_login_card'])->name('without_login_card');
+   
+    Route::get('card',[FrontController::class, 'card'])->name('card');
 
 
-    Route::get('logout' , [FrontController::class,'logout'])->name('logout');
+    Route::get('product_details' , [FrontController::class,'product_details'])->name('product_details');
 
+    Route::get('logout',[FrontController::class, 'logout'])->name('logout');
 
 });
 
@@ -51,7 +50,12 @@ Route::group(['prefix' => 'admin' , 'as' => 'admin.'], function()
     Route::get('login' , [AdminController::class, 'login'])->name('login');
     Route::post('login' , [AdminController::class, 'login_submit'])->name('log');
 
-    Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+    Route::group(['middleware'=> 'admin'], function(){
+    
+        Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+
+    });
+
 });
 
 

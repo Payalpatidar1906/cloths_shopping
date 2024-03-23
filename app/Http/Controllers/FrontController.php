@@ -96,7 +96,12 @@ class FrontController extends Controller
         $request->session()->invalidate();
      
         $request->session()->regenerateToken();
+        
      
         return redirect()->route('front.login');
+    }
+
+    function product_details(){
+        return view('front.product_details');
     }
 }
