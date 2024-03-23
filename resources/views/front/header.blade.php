@@ -20,6 +20,7 @@
       <link href="{{url('/css/')}}/style.css" rel="stylesheet" />
       <!-- responsive style -->
       <link href="{{url('/css/')}}/responsive.css" rel="stylesheet" />
+      @stack('css')
    </head>
    <body>
       <div class="hero_area">

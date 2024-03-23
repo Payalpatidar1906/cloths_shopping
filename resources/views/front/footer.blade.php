@@ -83,5 +83,7 @@
       <script src="{{url('/js/')}}/bootstrap.js"></script>
       <!-- custom js -->
       <script src="{{url('/js/')}}/custom.js"></script>
+
+      @stack('js')
    </body>
 </html>

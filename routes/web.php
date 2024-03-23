@@ -6,9 +6,7 @@ use App\Http\Controllers\AdminController;
 
 
 
-// Route::get('/', function () {
-//     return view('front.login');
-// });
+Route::get('/',[FrontController::class,'home']);
 
 
 // Route::get('home' , [FrontController::class, 'home'])->name('home');
@@ -37,8 +35,6 @@ Route::group(['prefix' => 'front' , 'as' => 'front.'], function()
 
     //Route::get('card' , [FrontController::class, 'card'])->name('card');
     Route::get('card',[FrontController::class, 'card'])->name('card');
-
-    Route::get('without_login_card',[FrontController::class, 'without_login_card'])->name('without_login_card');
 
 
     Route::get('logout' , [FrontController::class,'logout'])->name('logout');
