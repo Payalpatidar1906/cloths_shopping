@@ -20,15 +20,16 @@ class AdminController extends Controller
             'logemail' => 'required',
             'logpass' => 'required'
         ]);
-
-        if (Auth::guard('admin')->attempt([
+        $data = [
             'email' => $req->logemail,
             'password' => $req->logpass
-        ]))
+        ];
+        //dd($data);
+        if (Auth::guard('deep')->attempt($data))
         {
-            dd('done');
+           return redirect()->route('admin.dashboard');
         }else {
-            dd('else');
+            return redirect()->route('admin.login');
         }
         
 
