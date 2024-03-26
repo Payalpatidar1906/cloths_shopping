@@ -54,6 +54,19 @@ Route::group(['prefix' => 'admin' , 'as' => 'admin.'], function()
     
         Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
 
+        Route::get('product', [AdminController::class, 'product'])->name('product');
+
+        Route::get('contact', [AdminController::class, 'contact'])->name('contact');
+
+        Route::get('about', [AdminController::class, 'about'])->name('about');
+        Route::post('about', [AdminController::class, 'about_submit'])->name('about_submit');
+
+
+        Route::get('testimonial', [AdminController::class, 'testimonial'])->name('testimonial');
+
+
+
+
     });
 
 });

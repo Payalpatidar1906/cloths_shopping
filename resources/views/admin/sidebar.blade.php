@@ -44,9 +44,9 @@
             <span>Display Management</span>
           </a>
           <ul class="treeview-menu">
-            <li><a href=""><i class="fa fa-circle-o"></i>Banner</a></li>
-            <li><a href=""><i class="fa fa-circle-o"></i>Contact Us</a></li>
-            <li><a href=""><i class="fa fa-circle-o"></i>About Us</a></li>
+            <li><a href="{{route('admin.about')}}"><i class="fa fa-circle-o"></i>About us</a></li>
+            <li><a href="{{route('admin.testimonial')}}"><i class="fa fa-circle-o"></i>Testimonial</a></li>
+            <li><a href="{{route('admin.contact')}}"><i class="fa fa-circle-o"></i>Contact us</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -65,7 +65,7 @@
             <span>Products</span>
           </a>
           <ul class="treeview-menu">
-            <li><a href=""><i class="fa fa-circle-o"></i>Add Product</a></li>
+            <li><a href="{{route('admin.product')}}"><i class="fa fa-circle-o"></i>Add Product</a></li>
           </ul>
         </li>
         <li>
